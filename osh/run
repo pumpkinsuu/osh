@@ -1,0 +1,3 @@
+g++ -Wall -o osh code/main.cpp code/getInput.cpp code/createPipe.cpp code/redirect.cpp code/execute.cpp code/special.cpp
+clear
+./osh
