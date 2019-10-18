@@ -36,13 +36,13 @@ int execute(vector <char*> args)
     }
     else
     {
-        // cout << "\nParent!\n";
         // Neu khong co & thi cho tien trinh con.
         if (!concurrent)
         {
             int status;
             waitpid(pid, &status, WUNTRACED);
         }     
+        // cout << "\nParent!\n";
     }
     
     return 1;
