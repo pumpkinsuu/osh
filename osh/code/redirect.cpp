@@ -5,8 +5,8 @@ void redirect(vector <char*>& args)
 {
     size_t n = args.size();   
 
-    // Kiem ra dong lenh co tu 2 lenh tro len.
-    if (n > 1)
+    // Kiem ra dong lenh co tu 3 lenh tro len.
+    if (n > 2)
     {
         if (args[n - 2][0] == '>')
         {
