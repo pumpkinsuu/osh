@@ -1,0 +1,14 @@
+ls
+ls -l
+ps
+!!
+ls -l | less
+ps > txt
+sort -r -n < txt | less
+ls -l | sort | uniq 
+sort < input > txt
+history
+history -c
+!!
+history
+exit

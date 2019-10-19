@@ -1,7 +1,7 @@
 #include "header.h"
 
 // Xu ly dau vao.
-int getInput(vector <char*>& args, vector <string>& history, char cwd[])
+int getInput(vector <char*>& args, vector <string>& history)
 {
     string line;
 
@@ -22,7 +22,7 @@ int getInput(vector <char*>& args, vector <string>& history, char cwd[])
         if (tmp == "!!")
         {
             if (history[history.size() - 2] == "")
-                cout << "No commands in history!\n";          
+                cout << "No commands in history!\n";         
             else
             {
                 // Chen dong lenh cu vao vong lenh moi.
@@ -49,7 +49,7 @@ int getInput(vector <char*>& args, vector <string>& history, char cwd[])
     }
 
     //  Luu dong lenh vua nhap.
-    save(history, cwd);
+    save(history);
 
     // Kiem tra co lenh dac biet nao khong.
     int check = special(history);

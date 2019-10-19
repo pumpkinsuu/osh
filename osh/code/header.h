@@ -9,11 +9,11 @@
 
 using namespace std;
 
-int getInput(vector <char*>& args, vector <string>& history, char cwd[]);
+int getInput(vector <char*>& args, vector <string>& history);
 void redirect(vector <char*>& args);
 void createPipe(vector <char*>& args);
 int execute(vector <char*> args);
 
 int special(vector <string>& history);
 void load(vector <string>& history);
-void save(const vector <string>& history, char cwd[]);
+void save(const vector <string>& history);

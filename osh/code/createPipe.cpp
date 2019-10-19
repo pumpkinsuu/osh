@@ -3,18 +3,19 @@
 // Tao pipe.
 void createPipe(vector <char*>& args)
 {
-    size_t k = 0;
+    size_t k = args.size() - 1;
     vector <char*> cm;
 
-    bool flag = 0;
+    int flag = 0;
     // Tim vi tri cua pipe.
-    while (k < args.size() && args[k][0] != '|')
+    while (k > 0 && args[k][0] != '|')
     {
         if (flag)
         {
             // Neu co 2 redirection cat 2 ra.
             if (args[k][0] == '<' || args[k][0] == '>')
             {
+                k = flag;
                 char* c = new char[4];
                 c[0] = 'c';
                 c[1] = 'a';
@@ -28,13 +29,16 @@ void createPipe(vector <char*>& args)
         else
         {
             if (args[k][0] == '<' || args[k][0] == '>')
-                flag = 1;
+            {
+                if (args[k - 1][0] != '<' && args[k - 1][0] != '>')
+                    flag = k;
+            }
         }      
 
-        ++k;
+        --k;
     }  
 
-    if (k == args.size())
+    if (!k)
         return;
 
     // Cat chuoi lam 2.
