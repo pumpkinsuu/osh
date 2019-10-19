@@ -3,9 +3,10 @@ ls
 ps -ael &
 ls -l | sort -r
 ps > txt
-sort -r -n < txt | less
 ls -l | sort | uniq 
 sort < input >> txt
+sort -r -n < txt
+rm txt
 history
 history -c
 !!
