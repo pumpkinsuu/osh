@@ -25,13 +25,11 @@ int getInput(vector <char*>& args, vector <string>& history)
                 cout << "No commands in history!\n";         
             else
             {
+                history.pop_back();
                 // Chen dong lenh cu vao vong lenh moi.
                 for (auto x : args_old)
-                {
-                     args.push_back(x); 
-                     history.back() += x;
-                     history.back() += ' '; 
-                }  
+                    args.push_back(x);
+
                 cout << history.back() << '\n';      
             }
         }
