@@ -1,6 +1,6 @@
-ls
+ls -l
 !!
-ps -ael &
+ps &
 ls -l | sort -r
 ps > txt
 ls -l | sort | uniq 
