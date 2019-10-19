@@ -21,7 +21,6 @@ int execute(vector <char*> args)
     }
     else if (pid == 0)
     {
-        // cout << "\nChild!\n";
         // Tao pipe neu co.
         createPipe(args);
         // input va output redirection neu co.
@@ -41,8 +40,7 @@ int execute(vector <char*> args)
         {
             int status;
             waitpid(pid, &status, WUNTRACED);
-        }     
-        // cout << "\nParent!\n";
+        }
     }
     
     return 1;

@@ -15,8 +15,11 @@ obj/%.o: code/%.cpp
 	$(CC) $(CFLAG) -o $@ -c $< 
 
 clear:
-	rm -f $(OBJ)
-	rm -d obj
+	rm -f -r $(OBJ)
+
+clean:
+	rm -f output
+	rm -f -r bin
 
 test:
 	./bin/osh < input > output

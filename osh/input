@@ -1,14 +1,17 @@
 ls
-ls -l
-ps
 !!
-ls -l | less
+ps -ael &
+ls -l | sort -r
 ps > txt
 sort -r -n < txt | less
 ls -l | sort | uniq 
-sort < input > txt
+sort < input >> txt
 history
 history -c
 !!
 history
+cd ..
+pwd
+cd osh
+pwd
 exit

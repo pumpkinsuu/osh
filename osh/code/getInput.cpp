@@ -31,7 +31,8 @@ int getInput(vector <char*>& args, vector <string>& history)
                      args.push_back(x); 
                      history.back() += x;
                      history.back() += ' '; 
-                }        
+                }  
+                cout << history.back() << '\n';      
             }
         }
         else
