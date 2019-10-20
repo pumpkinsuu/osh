@@ -14,12 +14,18 @@ bin/osh: $(OBJ)
 obj/%.o: code/%.cpp
 	$(CC) $(CFLAG) -o $@ -c $< 
 
-clear:
-	rm -f -r $(OBJ)
-
-clean:
-	rm -f output
-	rm -f -r bin
-
 test:
 	./bin/osh < input > output
+
+clear:
+	rm -f -r $(OBJ)
+	rm -f output
+	rm -f txt
+	rm -f bin/history.txt
+
+remove:
+	rm -f -r bin
+	rm -f -r $(OBJ)
+	rm -f output
+	rm -f txt
+	

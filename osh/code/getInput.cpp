@@ -21,8 +21,12 @@ int getInput(vector <char*>& args, vector <string>& history)
         // Thuc hien lenh gan nhat trong lich su.
         if (tmp == "!!")
         {
-            if (history[history.size() - 2] == "")
-                cout << "No commands in history!\n";         
+            if (history.size() == 1 || history[history.size() - 2] == "")
+            {
+                history.pop_back();
+                cout << "No commands in history!\n"; 
+                return -1;
+            }           
             else
             {
                 history.pop_back();

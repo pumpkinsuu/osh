@@ -1,14 +1,14 @@
 
-# C SHELL
+# SIMPLE SHELL
 
 * Build:
     > make all
 
-* Clear object file:
-    > make clear
-    
-* Clear bin and output file:
-    > make clean
-    
 * Test case:
     > make test
+
+* Clear object and other text files:
+    > make clear
+
+* Remove generated files:
+    > make remove

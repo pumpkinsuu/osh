@@ -1,7 +1,7 @@
 #include "header.h"
 
 // Xu ly lenh.
-int execute(vector <char*> args)
+void execute(vector <char*> args)
 {
     bool concurrent = false;
     // Kiem tra xem co thuc thi dong thoi hay lan luot.
@@ -42,6 +42,4 @@ int execute(vector <char*> args)
             waitpid(pid, &status, WUNTRACED);
         }
     }
-    
-    return 1;
 }

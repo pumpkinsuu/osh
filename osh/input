@@ -1,18 +1,19 @@
-ls -l
-!!
+ls
 ps &
-ls -l | sort -r
-ps > txt
-ls -l | sort | uniq 
-sort < input >> txt
-sort -r -n < txt
-rm txt
+!!
 history
 history -c
 !!
 history
+ps > txt
+sort -r < txt
+cat txt | sort
+sort < txt >> txt
+cat < input | sort | uniq >> txt
+pwd
+cd bin
+pwd
 cd ..
 pwd
-cd osh
-pwd
+help
 exit

@@ -37,6 +37,20 @@ int special(vector <string>& history)
             }
             return -1;    
         }
+
+        if (tmp == "help")
+        {
+            cout << "\nSIMPLE SHELL\n"
+                << "\nList of Commands supported:"
+                << "\n>!!"
+                << "\n>cd"
+                << "\n>history"
+                << "\n>history -c"
+                << "\n>exit"
+                << "\n>All other general commands available in UNIX shell.\n";
+            
+            return -1;
+        }
     }
 
     return 1;
