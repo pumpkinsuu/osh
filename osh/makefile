@@ -25,7 +25,7 @@ clear:
 
 remove:
 	rm -f -r bin
-	rm -f -r $(OBJ)
+	rm -f -r obj
 	rm -f output
 	rm -f txt
 	
